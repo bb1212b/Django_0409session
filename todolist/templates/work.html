@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>할 일 정보</h1>
+        {% if todo_item %}
+        <p>제목: {{ todo_item.title }}</p>
+        <p>설명: {{ todo_item.description }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

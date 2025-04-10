@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>사용자의 할 일을 입력해주세요</h1>
+        <br> 
+        <form action="/work/" method="post">
+            {% csrf_token %}
+            <label for="titleInput">할 일 제목:</label>
+            <input id="titleInput" type="text" name="title">
+            <br><br>
+            <label for="descriptionInput">할 일 설명:</label>
+            <textarea id="descriptionInput" name="description" rows="4" cols="50"></textarea>
+            <br>
+            <input type="submit" value="제출">
+        </form>
+    </div>
+</body>
+</html>

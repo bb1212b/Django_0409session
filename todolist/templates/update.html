@@ -1,0 +1,25 @@
+<!-- update.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>할 일 업데이트</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="titleInput">할 일 제목:</label>
+            <input id="titleInput" type="text" name="title" value="{{ todo_item.title }}">
+            <br><br>
+            <label for="descriptionInput">할 일 설명:</label>
+            <textarea id="descriptionInput" name="description" rows="4" cols="50">{{ todo_item.description }}</textarea>
+            <br>
+            <input type="submit" value="업데이트">
+        </form>
+    </div>
+</body>
+</html>
